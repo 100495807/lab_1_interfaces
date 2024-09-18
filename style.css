@@ -1,0 +1,72 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    color: white;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+header .logo {
+    height: 80px;
+    width: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a.active {
+    color: yellow; /* Cambia el color del texto a amarillo */
+    font-weight: bolder; /* Aumenta el grosor de la fuente */
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .boton {
+    margin-left: 10px;
+    background-color: white;
+    color: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-buttons .boton:hover {
+    background-color: #ff8f81;
+}
+
+section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; /* Añade un margen superior para evitar que el contenido quede oculto detrás del header */
+}
