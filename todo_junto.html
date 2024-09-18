@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sitio Web de Papá Noel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo.jpg" class="logo" height="100px" width="100px">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#papa_noel">Papá Noel</a></li>
+                <li><a href="#cartas">Las cartas</a></li>
+                <li><a href="#enviar">Envía tu carta</a></li>
+                <li><a href="#jugar">¡Juega!</a></li>
+            </ul>
+            <button class="boton">Sign in</button>
+            <button class="boton">Register</button>
+        </nav> 
+    </header>
+
+    <!-- Sección Home -->
+    <section id="home">
+        <h1>Sigue a Papá Noel</h1>
+        <div class="counter">Días restantes para el 24 de diciembre a las 23:59: <span id="countdown">XX</span></div>
+        <button disabled>Botón deshabilitado</button>
+    </section>
+
+    <!-- Sección Papá Noel -->
+    <section id="papa_noel">
+        <h1>Papá Noel</h1>
+        <p>Contenido sobre Papá Noel...</p>
+    </section>
+
+    <!-- Sección Las cartas -->
+    <section id="cartas">
+        <h1>Las cartas</h1>
+        <div class="cartas-grid">
+            <article class="carta">
+                <img src="imagenes/foto1.jpg" alt="Foto de Juan">
+                <p><strong>Nombre:</strong> Juan</p>
+                <p><strong>Ciudad:</strong> Madrid</p>
+                <p><strong>País:</strong> España</p>
+                <p><strong>Texto:</strong> Querido Papá Noel, este año he sido muy bueno...</p>
+            </article>
+            <article class="carta">
+                <img src="imagenes/foto2.jpg" alt="Foto de María">
+                <p><strong>Nombre:</strong> María</p>
+                <p><strong>Ciudad:</strong> Buenos Aires</p>
+                <p><strong>País:</strong> Argentina</p>
+                <p><strong>Texto:</strong> Querido Papá Noel, me gustaría pedir...</p>
+            </article>
+            <article class="carta">
+                <img src="imagenes/foto3.jpg" alt="Foto de Pedro">
+                <p><strong>Nombre:</strong> Pedro</p>
+                <p><strong>Ciudad:</strong> Lima</p>
+                <p><strong>País:</strong> Perú</p>
+                <p><strong>Texto:</strong> Querido Papá Noel, espero que este año...</p>
+            </article>
+            <article class="carta">
+                <img src="imagenes/foto4.jpg" alt="Foto de Ana">
+                <p><strong>Nombre:</strong> Ana</p>
+                <p><strong>Ciudad:</strong> Bogotá</p>
+                <p><strong>País:</strong> Colombia</p>
+                <p><strong>Texto:</strong> Querido Papá Noel, me gustaría recibir...</p>
+            </article>
+            <article class="carta">
+                <img src="imagenes/foto5.jpg" alt="Foto de Luis">
+                <p><strong>Nombre:</strong> Luis</p>
+                <p><strong>Ciudad:</strong> Ciudad de México</p>
+                <p><strong>País:</strong> México</p>
+                <p><strong>Texto:</strong> Querido Papá Noel, este año quiero...</p>
+            </article>
+            <article class="carta">
+                <img src="imagenes/foto6.jpg" alt="Foto de Sofía">
+                <p><strong>Nombre:</strong> Sofía</p>
+                <p><strong>Ciudad:</strong> Santiago</p>
+                <p><strong>País:</strong> Chile</p>
+                <p><strong>Texto:</strong> Querido Papá Noel, espero que puedas...</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección Envía tu carta -->
+    <section id="enviar">
+        <h1>Envía tu carta</h1>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required><br>
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required><br>
+            <label for="texto">Texto:</label>
+            <textarea id="texto" name="texto" required></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Sección ¡Juega! -->
+    <section id="jugar">
+        <h1>¡Juega!</h1>
+        <div class="jugar-grid">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Juego 1</a></li>
+                    <li><a href="#">Juego 2</a></li>
+                    <li><a href="#">Juego 3</a></li>
+                </ul>
+            </div>
+            <div class="juego">
+                <img src="imagenes/juego-placeholder.jpg" alt="Juego no funcional">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
