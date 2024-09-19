@@ -7,7 +7,7 @@
 </head>
 <body>
     <header class="encabezado">
-    <img src="imagenes/logo.jpg">
+        <a href="#"><img src="imagenes/logo.jpg" alt="Logo"></a>
     <nav>
         <ul>
             <li><a href="#home" class="active">Home</a></li>
@@ -123,19 +123,33 @@
         </div>
     </section>
 
-    <!-- Sección Envía tu carta -->
+    <!-- Sección Enviar tu carta -->
     <section id="enviar">
         <h1>Envía tu carta</h1>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br>
-            <label for="ciudad">Ciudad:</label>
-            <input type="text" id="ciudad" name="ciudad" required><br>
-            <label for="pais">País:</label>
-            <input type="text" id="pais" name="pais" required><br>
-            <label for="texto">Texto:</label>
-            <textarea id="texto" name="texto" required></textarea><br>
-            <button type="submit">Enviar</button>
+        <form class="enviar-form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" placeholder="Escribe tu ciudad">
+            </div>
+            <div class="form-group">
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" placeholder="Escribe tu país">
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" placeholder="Escribe tu edad">
+            </div>
+            <div class="form-group textarea-group">
+                <label for="carta">Carta a Papá Noel:</label>
+                <textarea id="carta" name="carta" rows="4" placeholder="Escribe tu carta a Papá Noel"></textarea>
+            </div>
+            <div class="form-group button-group">
+                <button type="submit">Enviar</button>
+            </div>
         </form>
     </section>
 
@@ -157,13 +171,17 @@
     </section>
 
     <footer class="pie-de-pagina">
-        <ul>
-            <li><a href="privacidad.html">Política de Privacidad</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-        </ul>
+        <a href="privacidad.html" class="Politica">Política de Privacidad</a>
+        <a href="contacto.html" class="Contacto">Contacto</a>
+        <a href="https://www.facebook.com" class="Facebook" target="_blank">
+            <img src="imagenes/facebook.jpg" alt="Facebook">
+        </a>
+        <a href="https://www.twitter.com" class="Twitter" target="_blank">
+            <img src="imagenes/twitter.jpg" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com" class="Instagram" target="_blank">
+            <img src="imagenes/instagram.jpg" alt="Instagram">
+        </a>
     </footer>
 </body>
 </html>

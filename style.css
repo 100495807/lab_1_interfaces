@@ -177,6 +177,10 @@ nav ul li a:hover {
 
 #cartas {
     background-color: #f0f0f0; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    
 }
 
 .cartas-grid {
@@ -225,13 +229,14 @@ nav ul li a:hover {
     flex: 1; /* Permite que el texto ocupe el espacio restante */
 }
 
-#cartas h1{
+#cartas h1 {
     margin-top: 0; /* Elimina el margen superior del encabezado */
-    font-family: 'Pacifico', cursive; /* Fuente personalizada */
-    color: #ff0000; /* Color rojo festivo */
-    text-shadow: 2px 2px 4px #000000; /* Sombra al texto */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
+    font-family: 'Great Vibes', cursive; /* Fuente personalizada */
+    color: #008000; /* Color verde festivo */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: #9cd4f5; /* Fondo amarillo claro */
+    border: 2px solid #FF0000; /* Borde rojo */
 }
 
 .carta p {
@@ -244,5 +249,111 @@ nav ul li a:hover {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+}
+
+#enviar {
+    background-color: #f0f0f0; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+}
+
+#enviar h1 {
+    margin-bottom: 20px; /* Añade un margen inferior al título */
+}
+
+.enviar-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los campos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Añade un margen inferior a las etiquetas */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+}
+
+.form-group.textarea-group {
+    grid-column: span 2; /* Ocupa dos columnas */
+}
+
+.form-group textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 150px; /* Ajusta la altura del textarea */
+}
+
+.form-group.button-group {
+    grid-column: span 2; /* Ocupa dos columnas */
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el botón verticalmente */
+}
+
+.form-group button {
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor de mano */
+    text-align: center; /* Centra el texto */
+    width: 100px; /* Ancho del botón */
+}
+
+.form-group button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el texto del marcador de posición */
+::placeholder {
+    color: #999; /* Color suave para el texto del marcador de posición */
+}
+
+.pie-de-pagina {
+    background-color: #ffffff; /* Color de fondo oscuro */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.pie-de-pagina a {
+    color: rgb(0, 0, 0); /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 0 15px; /* Añade un margen lateral a los enlaces */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.pie-de-pagina img {
+    width: 30px; /* Ajusta el tamaño de los iconos */
+    height: auto; /* Mantiene la proporción de los iconos */
+    margin: 0 10px; /* Añade un margen lateral a los iconos */
+    vertical-align: middle; /* Alinea verticalmente los iconos con el texto */
+    transition: transform 0.3s; /* Añade una transición suave */
+}
+
+
+.pie-de-pagina img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón por encima */
 }
 
