@@ -243,16 +243,8 @@ nav ul li a:hover {
     margin: 5px 0; /* Añade un margen vertical de 5px a los párrafos */
 }
 
-#enviar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
 #enviar {
-    background-color: #f0f0f0; /* Color de fondo */
+    background-color: #9cd4f5; /* Color de fondo */
     padding: 20px; /* Espaciado interno */
     box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
     height: 100vh; /* Ocupa toda la altura de la ventana */
@@ -260,10 +252,18 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
+    font-weight: bold;
 }
 
 #enviar h1 {
     margin-bottom: 20px; /* Añade un margen inferior al título */
+    font-family: 'Great Vibes', cursive; /* Fuente personalizada */
+    color: #008000; /* Color verde festivo */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: #9cd4f5; /* Fondo amarillo claro */
+    border: 2px solid #FF0000; /* Borde rojo */
+    font-weight: bold;
 }
 
 .enviar-form {
@@ -327,6 +327,79 @@ nav ul li a:hover {
     color: #999; /* Color suave para el texto del marcador de posición */
 }
 
+#jugar {
+    padding-top: 60px; /* Ajusta este valor según la altura de tu header */
+    min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+    font-weight: bold;
+    background-color: #00f7ff; /* Color de fondo */
+}
+
+#jugar h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+    padding-top: 100px;
+    font-family: 'Pacifico', cursive; /* Fuente personalizada */
+    background: linear-gradient(45deg, #ff6f61, #ff8f81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+}
+
+.jugar-contenido {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Dos columnas: menú y display */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.menu-juegos {
+    background-color:#00f7ff;
+    padding: 20px;
+}
+
+.menu-juegos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-juegos li {
+    margin-bottom: 50px;
+}
+
+.menu-juegos a {
+    text-decoration: none;
+    color: #ff6f61;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-juegos a:hover {
+    background-color: #ff8f81;
+    color: #fff;
+}
+
+.juego-display {
+    background-color: #00f7ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.juego-display img {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+
+
 .pie-de-pagina {
     background-color: #ffffff; /* Color de fondo oscuro */
     color: rgb(0, 0, 0); /* Color del texto */
@@ -350,6 +423,12 @@ nav ul li a:hover {
     margin: 0 10px; /* Añade un margen lateral a los iconos */
     vertical-align: middle; /* Alinea verticalmente los iconos con el texto */
     transition: transform 0.3s; /* Añade una transición suave */
+}
+
+.Facebook img {
+    width: 35px; /* Ajusta el tamaño según sea necesario */
+    height: 35px; /* Asegúrate de que el tamaño sea consistente con las otras imágenes */
+    /* Otros estilos que aseguren la consistencia con las otras imágenes */
 }
 
 
