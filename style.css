@@ -3,7 +3,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
+    scroll-snap-type: y mandatory; /* Habilita el scroll snap en el eje Y */
+    overflow-y: scroll; /* Habilita el desplazamiento vertical */
+    height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
 }
 
 header {
@@ -12,7 +15,7 @@ header {
     background-color: #ff6f61;
     padding: 10px 20px;
     color: white;
-    position: sticky; /* Fija el header en la parte superior */
+    position: fixed; /* Fija el header en la parte superior */
     top: 0; /* Posición en la parte superior */
     width: 100%; /* Ocupa todo el ancho de la página */
     z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
@@ -22,6 +25,31 @@ header {
 header .logo {
     height: 80px;
     width: 80px;
+    border-radius: 50%; /* Hace que el logo sea circular */
+    border: 2px solid white; /* Añade un borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para darle profundidad */
+    transition: transform 0.3s ease; /* Añade una transición suave para el efecto hover */
+}
+
+header .logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el ratón por encima */
+}
+
+section {
+    height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
+    margin-top: 60px;
+}
+
+/* Estilo para el contenido principal */
+main {
+    margin-top: 60px; /* Espacio para el encabezado fijo */
+    text-align: center;
 }
 
 /*Creamos un rotulo para poner en los títulos de las diferentes secciones*/
@@ -34,13 +62,11 @@ header .logo {
     text-align: center;
     font-family: 'Trebuchet MS';
     position: relative;
-    overflow: hidden;
+    margin-top: 0;
 }
 
 .rotulo h1 {
-    font-size: 3em;
     margin: 0;
-    z-index: 1;
     position: relative;
 }
 
@@ -116,16 +142,12 @@ nav ul li a.active {
 
 }
 
-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: white;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 100px; /* Añade un margen superior para evitar que el contenido quede oculto detrás del header*/
+/* Estilo para la sección de cartas */
+#cartas-section {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
 }
-
 
 /* Estilos para la cuadrícula de cartas */
 .cartas-grid {
