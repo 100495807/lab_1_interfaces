@@ -1,28 +1,28 @@
-/* Estilos generales */
+
+/*Creamos el estilo del body, para que mantenga un estilo común*/
 body {
     font-family: Arial, sans-serif;
+    background-color: lightgreen;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    scroll-snap-type: y mandatory; /* Habilita el scroll snap en el eje Y */
-    overflow-y: scroll; /* Habilita el desplazamiento vertical */
-    height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    scroll-behavior: smooth; /* Añade un desplazamiento suave al hacer scroll */
 }
 
-header {
+
+/* Estilos para la cabecera */
+.encabezado {
     display: flex;
-    align-items: right;
-    background-color: #ff6f61;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fd1111;
     padding: 10px 20px;
     color: white;
-    position: fixed; /* Fija el header en la parte superior */
-    top: 0; /* Posición en la parte superior */
-    width: 100%; /* Ocupa todo el ancho de la página */
-    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    position: sticky;
+    top: 0;
+    z-index: 100%;
 }
 
-header .logo {
+.encabezado img {
     height: 80px;
     width: 80px;
     border-radius: 50%; /* Hace que el logo sea circular */
@@ -31,51 +31,9 @@ header .logo {
     transition: transform 0.3s ease; /* Añade una transición suave para el efecto hover */
 }
 
-header .logo:hover {
+
+.encabezado img:hover {
     transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el ratón por encima */
-}
-
-section {
-    height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
-    margin-top: 60px;
-}
-
-/* Estilo para el contenido principal */
-main {
-    margin-top: 60px; /* Espacio para el encabezado fijo */
-    text-align: center;
-}
-
-/*Creamos un rotulo para poner en los títulos de las diferentes secciones*/
-
-.rotulo {
-    color: #000000; /* Texto blanco */
-    padding: 20px 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-family: 'Trebuchet MS';
-    position: relative;
-    margin-top: 0;
-}
-
-.rotulo h1 {
-    margin: 0;
-    position: relative;
-}
-
-
-nav {
-    display: flex;
-    justify-content: flex-end; /* Alinea la barra de navegación a la derecha */
-    flex-grow: 1; /* Permite que el nav ocupe el espacio disponible */
-    margin-right: 40px; /* Añade un margen derecho */
 }
 
 nav ul {
@@ -87,8 +45,9 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 18px;
+    margin-right: 20px;
 }
+
 
 nav ul li:last-child {
     margin-right: 0;
@@ -104,231 +63,80 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-nav ul li a.active {
-    color: black; /* Cambia el color del texto a amarillo */
-    font-weight: bolder; /* Aumenta el grosor de la fuente */
-    background-color: #ff8f81; /* Fondo diferente para resaltar */
+.active{
+    background-color: rgb(255, 0, 136); /* Fondo azul para resaltar */
+    color: white; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Aumenta el grosor de la fuente */
     padding: 5px 10px; /* Añade relleno alrededor del texto */
     border-radius: 5px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra para crear un recuadro sin bordes */
 }
 
 .auth-buttons {
     display: flex;
-    flex-direction: column; /* Coloca los botones en una columna */
-    align-items: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Añade un espacio de 10px entre los botones */
 }
 
-.auth-buttons .boton {
-    margin-left: 10px;
+.auth-buttons .boton,
+.auth-buttons .boton-active {
     background-color: white;
-    color: #ff6f61;
+    color: black;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 15px;
 }
 
+.auth-buttons .boton-active:hover,
 .auth-buttons .boton:hover {
-    background-color: #ff8f81;
+    background-color: rgb(0, 255, 162);
 }
-
-/* Estilos para resaltar los botones activos */
-.auth-buttons .boton.active {
-    background-color: #ff8f81; /* Fondo diferente para resaltar */
-    color: black; /* Cambia el color del texto a negro */
-    font-weight: bolder; /* Aumenta el grosor de la fuente */
-    padding: 10px 20px; /* Añade relleno alrededor del texto */
-    border-radius: 5px; /* Redondea las esquinas */
-
-}
-
-/* Estilo para la sección de cartas */
-#cartas-section {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-
-/* Estilos para la cuadrícula de cartas */
-.cartas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-    grid-template-rows: repeat(2, auto); /* 2 filas con altura automática */
-    gap: 20px; /* Espacio entre las cartas */
-    padding: 20px;
-}
-
-.carta {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center; /* Centra el contenido dentro de la carta */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-}
-
-.carta img {
-    width: 150px; /* Ajusta el tamaño de la imagen */
-    height: 150px; /* Ajusta el tamaño de la imagen */
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción y cubra el área asignada */
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    margin-bottom: 10px; /* Añade un margen inferior debajo de la imagen */
-}
-
-.carta-texto {
-    text-align: center; /* Centra el texto */
-}
-
-.jugar-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
-    padding: 20px;
-}
-
-.menu {
-    border-right: 1px solid #ccc;
-    padding-right: 20px;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu ul li {
-    margin-bottom: 10px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #000;
-    display: block;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border-radius: 5px;
-}
-
-.menu ul li a:hover {
-    background-color: #e0e0e0;
-}
-
-.juego img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #f8f8f8;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
+#home{
+    height: 100vh;
     width: 100%;
-    bottom: 0;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    flex-direction: column; /* Cambia la dirección del flex a columna */
     justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 220, 177); /* Añade un color de fondo para visualizar mejor */
 }
 
-footer ul li {
-    margin: 0 15px;
+#home h1 {
+    font-size: 6em;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 
-footer ul li a {
-    text-decoration: none;
-    color: #000;
+#home .counter {
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    margin-top: 10px; /* Añade un margen superior para separar del título */
 }
 
-footer ul li a:hover {
-    text-decoration: underline;
+#home button {
+    margin-top: 40px;
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente */
+    background-color: #ff6f61; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
-/* Media Queries */
-
-/* Tablet */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    section {
-        margin-top: 20px;
-    }
-
-    .cartas-grid {
-        grid-template-columns: 1fr; /* 1 columna en tablet */
-    }
-
-    .jugar-grid {
-        grid-template-columns: 1fr; /* 1 columna en tablet */
-    }
-
-    footer ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer ul li {
-        margin-bottom: 10px;
-    }
+#home button:hover {
+    background-color: #ff8f81; /* Color de fondo al pasar el ratón */
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    section {
-        margin-top: 20px;
-    }
-
-    .cartas-grid {
-        grid-template-columns: 1fr; /* 1 columna en móvil */
-    }
-
-    .jugar-grid {
-        grid-template-columns: 1fr; /* 1 columna en móvil */
-    }
-
-    footer ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer ul li {
-        margin-bottom: 10px;
-    }
-
-    .boton {
-        width: 100%;
-        margin-top: 10px;
-    }
+#papa_noel{;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex a columna */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 220, 177); /* Añade un color de fondo para visualizar mejor */
 }

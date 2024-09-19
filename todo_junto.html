@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <title>Sitio Web de Papá Noel</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
-    <header>
-    <img src="imagenes/logo.jpg" class="logo" height="100px" width="100px">
+    <header class="encabezado">
+    <img src="imagenes/logo.jpg">
     <nav>
         <ul>
             <li><a href="#home" class="active">Home</a></li>
@@ -17,7 +16,7 @@
             <li><a href="#enviar">Envía tu carta</a></li>
             <li><a href="#jugar">¡Juega!</a></li>
             <li class="auth-buttons">
-                <button class="boton active">Sign in</button>
+                <button class="boton-active">Sign in</button>
                 <button class="boton">Register</button>
             </li>
         </ul>
@@ -26,18 +25,14 @@
 
     <!-- Sección Home -->
     <section id="home">
-        <div class="rotulo">
-            </h1>Sigue a Papá Noel</h1>
-        </div>
-        <div class="counter">Días restantes para el 24 de diciembre a las 23:59: <span id="countdown">XX</span></div>
-        <button disabled>Botón</button>
+        <h1>Sigue a Papá Noel</h1>
+        <div class="counter">99</span></div>
+        <button>Empezar</button>
     </section>
 
     <!-- Sección Papá Noel -->
     <section id="papa_noel">
-        <div class="rotulo">
-            <h1>Papá Noel</h1> 
-        </div>
+        <h1>Papá Noel</h1> 
         <p>Contenido sobre Papá Noel...</p>
     </section>
 
@@ -118,9 +113,7 @@
 
     <!-- Sección Envía tu carta -->
     <section id="enviar">
-        <div class="rotulo">
-            <h1>Envía tu carta</h1>
-        </div>
+        <h1>Envía tu carta</h1>
         <form>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required><br>
@@ -136,9 +129,7 @@
 
     <!-- Sección ¡Juega! -->
     <section id="jugar">
-        <div class="rotulo">
-            <h1>¡Juega!</h1>
-        </div>
+        <h1>¡Juega!</h1>
         <div class="jugar-grid">
             <div class="menu">
                 <ul>
@@ -153,7 +144,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="pie-de-pagina">
         <ul>
             <li><a href="privacidad.html">Política de Privacidad</a></li>
             <li><a href="contacto.html">Contacto</a></li>
