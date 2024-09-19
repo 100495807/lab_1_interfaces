@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 /*Creamos el estilo del body, para que mantenga un estilo común*/
 body {
@@ -99,7 +102,7 @@ nav ul li a:hover {
     flex-direction: column; /* Cambia la dirección del flex a columna */
     justify-content: center;
     align-items: center;
-    background-color: rgb(230, 220, 177); /* Añade un color de fondo para visualizar mejor */
+    background-color: rgb(30, 220, 177); /* Añade un color de fondo para visualizar mejor */
 }
 
 #home h1 {
@@ -141,17 +144,15 @@ nav ul li a:hover {
 
 .papa-noel-container {
     display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
     gap: 20px; /* Añade un espacio de 20px entre la imagen y el texto */
-    max-width: 800px; /* Limita el ancho máximo del contenedor */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
     padding: 20px;
-    background-color: white; /* Fondo blanco para el contenedor */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+    background-color:  rgb(230, 220, 177); /* Fondo blanco para el contenedor */
+    margin-top: 80px;
 }
 
 .papa-noel-img {
-    width: 300px; /* Ajusta el tamaño de la imagen */
+    width: 450px; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 10px; /* Redondea las esquinas de la imagen */
 }
@@ -163,8 +164,85 @@ nav ul li a:hover {
 
 .papa-noel-texto h1 {
     margin-top: 0; /* Elimina el margen superior del encabezado */
+    font-family: 'Pacifico', cursive; /* Fuente personalizada */
+    color: #ff0000; /* Color rojo festivo */
+    text-shadow: 2px 2px 4px #000000; /* Sombra al texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .papa-noel-texto p {
     margin-bottom: 10px; /* Añade un margen inferior a los párrafos */
 }
+
+#cartas {
+    background-color: #f0f0f0; /* Color de fondo */
+}
+
+.cartas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas de igual tamaño */
+    gap: 20px; /* Espacio entre las cartas */
+    padding: 20px;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+    justify-content: center; /* Centra las columnas horizontalmente */
+    align-content: center; /* Centra las filas verticalmente */    
+}
+
+.carta {
+    border: 1px solid #ccc;
+    padding: 10px; /* Reduce el padding para que las cartas sean más pequeñas */
+    border-radius: 10px;
+    text-align: left; /* Alinea el contenido a la izquierda */
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Ajusta el ancho del contenedor */
+    height: 200px; /* Ajusta la altura del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carta h2 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 10px; /* Añade un margen inferior al título */
+}
+
+.carta-contenido {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+.carta img {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: 80px; /* Ajusta el tamaño de la imagen */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción y cubra el área asignada */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-right: 10px; /* Añade un margen derecho debajo de la imagen */
+}
+
+.carta-texto {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+#cartas h1{
+    margin-top: 0; /* Elimina el margen superior del encabezado */
+    font-family: 'Pacifico', cursive; /* Fuente personalizada */
+    color: #ff0000; /* Color rojo festivo */
+    text-shadow: 2px 2px 4px #000000; /* Sombra al texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carta p {
+    margin: 5px 0; /* Añade un margen vertical de 5px a los párrafos */
+}
+
+#enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
