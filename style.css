@@ -18,7 +18,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #fd1111;
-    padding: 10px 20px;
+    padding: 5px 20px;
     color: white;
     position: sticky;
     top: 0;
@@ -66,6 +66,22 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav ul li button:active {
+    animation: button-click 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes button-click {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .active{
     background-color: rgb(255, 0, 136); /* Fondo azul para resaltar */
     color: white; /* Cambia el color del texto a blanco */
@@ -95,27 +111,30 @@ nav ul li a:hover {
 .auth-buttons .boton:hover {
     background-color: rgb(0, 255, 162);
 }
-#home{
-    height: 100vh;
-    width: 100%;
+#home {
+    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
-    flex-direction: column; /* Cambia la dirección del flex a columna */
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: rgb(30, 220, 177); /* Añade un color de fondo para visualizar mejor */
+    justify-content: center;
+    color: white; /* Color del texto para que sea legible sobre la imagen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
 }
 
 #home h1 {
     font-size: 6em;
-    color: rgb(0, 0, 0);
+    color: whitesmoke;
     text-align: center;
 }
 
 #home .counter {
     font-size: 1.5em;
-    color: black;
+    color: white;
     text-align: center;
-    margin-top: 10px; /* Añade un margen superior para separar del título */
 }
 
 #home button {
@@ -135,11 +154,20 @@ nav ul li a:hover {
 }
 
 #papa_noel {
+    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo navideña */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    background-color: rgb(230, 220, 177); /* Añade un color de fondo para visualizar mejor */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Color del texto para que sea legible sobre la imagen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    font-family: 'Mountains of Christmas'; /* Fuente navideña */
 }
 
 .papa-noel-container {
@@ -162,9 +190,14 @@ nav ul li a:hover {
     text-align: left; /* Alinea el texto a la izquierda */
 }
 
+.papa-noel-texto p {
+    margin-bottom: 10px; /* Añade un margen inferior a los párrafos */
+    font-family: 'Mountains of Christmas'; /* Fuente navideña */
+}
+
 .papa-noel-texto h1 {
     margin-top: 0; /* Elimina el margen superior del encabezado */
-    font-family: 'Pacifico', cursive; /* Fuente personalizada */
+    font-family: 'Pacifico'; /* Fuente personalizada */
     color: #ff0000; /* Color rojo festivo */
     text-shadow: 2px 2px 4px #000000; /* Sombra al texto */
     padding: 10px; /* Espaciado interno */
@@ -176,40 +209,46 @@ nav ul li a:hover {
 }
 
 #cartas {
-    background-color: #f0f0f0; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    
+    background-color: lightgray;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
 }
+
 
 .cartas-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-    grid-template-rows: repeat(2, 1fr); /* 2 filas de igual tamaño */
-    gap: 20px; /* Espacio entre las cartas */
-    padding: 20px;
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
-    justify-content: center; /* Centra las columnas horizontalmente */
-    align-content: center; /* Centra las filas verticalmente */    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
 }
 
 .carta {
+    background-color: white;
+    padding: 20px;
     border: 1px solid #ccc;
-    padding: 10px; /* Reduce el padding para que las cartas sean más pequeñas */
     border-radius: 10px;
-    text-align: left; /* Alinea el contenido a la izquierda */
-    display: flex;
-    flex-direction: column;
-    width: 300px; /* Ajusta el ancho del contenedor */
-    height: 200px; /* Ajusta la altura del contenedor */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px; /* Asegura que las cartas no se extiendan demasiado */
+    margin: 0 auto; /* Centra cada carta individualmente */
+    background-image: url('imagenes/plantilla-carta.jpg'); /* Ruta a tu imagen de fondo navideña */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .carta h2 {
     text-align: center; /* Centra el título */
     margin-bottom: 10px; /* Añade un margen inferior al título */
+    color: wheat;
 }
 
 .carta-contenido {
@@ -227,11 +266,12 @@ nav ul li a:hover {
 
 .carta-texto {
     flex: 1; /* Permite que el texto ocupe el espacio restante */
+    color: white;
 }
 
 #cartas h1 {
     margin-top: 0; /* Elimina el margen superior del encabezado */
-    font-family: 'Great Vibes', cursive; /* Fuente personalizada */
+    font-family: 'Great Vibes'; /* Fuente personalizada */
     color: #008000; /* Color verde festivo */
     padding: 15px; /* Espaciado interno */
     border-radius: 15px; /* Bordes redondeados */
@@ -244,33 +284,36 @@ nav ul li a:hover {
 }
 
 #enviar {
-    background-color: #9cd4f5; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #f5f5dc; /* Color beige claro que pega con la temática navideña */
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    color: #333; /* Color del texto para que sea legible sobre el fondo */
+    font-family: 'Arial', sans-serif; /* Fuente legible y sencilla */
 }
+
 
 #enviar h1 {
     margin-bottom: 20px; /* Añade un margen inferior al título */
-    font-family: 'Great Vibes', cursive; /* Fuente personalizada */
+    font-family: 'Mountains of Christmas'; /* Fuente navideña */
     color: #008000; /* Color verde festivo */
     padding: 15px; /* Espaciado interno */
     border-radius: 15px; /* Bordes redondeados */
-    background-color: #9cd4f5; /* Fondo amarillo claro */
+    background-color: #fff; /* Fondo blanco para el título */
     border: 2px solid #FF0000; /* Borde rojo */
     font-weight: bold;
 }
 
 .enviar-form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
-    gap: 20px; /* Espacio entre los campos */
-    width: 100%; /* Ocupa todo el ancho disponible */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .form-group {
@@ -342,7 +385,7 @@ nav ul li a:hover {
     font-size: 2.5em;
     color: #333;
     padding-top: 100px;
-    font-family: 'Pacifico', cursive; /* Fuente personalizada */
+    font-family: 'Pacifico'; /* Fuente personalizada */
     background: linear-gradient(45deg, #ff6f61, #ff8f81);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -436,3 +479,23 @@ nav ul li a:hover {
     transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón por encima */
 }
 
+
+@media (max-width: 768px) {
+    .enviar-form {
+        grid-template-columns: 1fr;
+        gap: 10px; /* Reduce el espacio entre los campos en pantallas pequeñas */
+    }
+
+    .form-group.textarea-group,
+    .form-group.button-group {
+        grid-column: span 1;
+    }
+
+    #enviar {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .cartas-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
