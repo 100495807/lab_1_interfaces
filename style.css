@@ -17,9 +17,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fd1111;
     padding: 5px 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     position: sticky;
     top: 0;
     z-index: 100%;
@@ -58,12 +57,13 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
+
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 nav ul li button:active {
@@ -84,7 +84,7 @@ nav ul li button:active {
 
 .active{
     background-color: rgb(255, 0, 136); /* Fondo azul para resaltar */
-    color: white; /* Cambia el color del texto a blanco */
+    color: rgb(0, 0, 0); /* Cambia el color del texto a blanco */
     font-weight: bold; /* Aumenta el grosor de la fuente */
     padding: 5px 10px; /* Añade relleno alrededor del texto */
     border-radius: 5px; /* Redondea las esquinas */
@@ -209,7 +209,10 @@ nav ul li button:active {
 }
 
 #cartas {
-    background-color: lightgray;
+    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     padding: 20px;
     box-sizing: border-box;
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
@@ -271,20 +274,26 @@ nav ul li button:active {
 
 #cartas h1 {
     margin-top: 0; /* Elimina el margen superior del encabezado */
-    font-family: 'Great Vibes'; /* Fuente personalizada */
-    color: #008000; /* Color verde festivo */
-    padding: 15px; /* Espaciado interno */
+    font-family: 'Great Vibes', cursive; /* Fuente personalizada */
+    font-size: 3em; /* Tamaño de fuente grande */
+    color: wheat; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno */
     border-radius: 15px; /* Bordes redondeados */
-    background-color: #9cd4f5; /* Fondo amarillo claro */
-    border: 2px solid #FF0000; /* Borde rojo */
+    text-align: center; /* Centra el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
+    display: inline-block; /* Hace que el rótulo se ajuste al contenido */
+    background: none; /* Elimina el fondo */
 }
-
 .carta p {
     margin: 5px 0; /* Añade un margen vertical de 5px a los párrafos */
 }
 
 #enviar {
-    background-color: #f5f5dc; /* Color beige claro que pega con la temática navideña */
+    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     padding: 20px;
     box-sizing: border-box;
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
@@ -303,7 +312,7 @@ nav ul li button:active {
     color: #008000; /* Color verde festivo */
     padding: 15px; /* Espaciado interno */
     border-radius: 15px; /* Bordes redondeados */
-    background-color: #fff; /* Fondo blanco para el título */
+    background-color: transparent; /* Fondo blanco para el título */
     border: 2px solid #FF0000; /* Borde rojo */
     font-weight: bold;
 }
@@ -314,6 +323,8 @@ nav ul li button:active {
     gap: 20px;
     width: 100%;
     max-width: 800px;
+    font-weight: bold;
+    color: #000000;
 }
 
 .form-group {
@@ -332,6 +343,7 @@ nav ul li button:active {
     border-radius: 5px; /* Bordes redondeados */
     width: 100%; /* Ocupa todo el ancho del contenedor */
     box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+    background-color: #fbdad5;
 }
 
 .form-group.textarea-group {
@@ -371,12 +383,15 @@ nav ul li button:active {
 }
 
 #jugar {
+    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     padding-top: 60px; /* Ajusta este valor según la altura de tu header */
     min-height: 100vh; /* Ocupa al menos la altura de la ventana */
     padding: 20px; /* Espaciado interno */
     box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
     font-weight: bold;
-    background-color: #00f7ff; /* Color de fondo */
 }
 
 #jugar h1 {
@@ -400,8 +415,9 @@ nav ul li button:active {
 }
 
 .menu-juegos {
-    background-color:#00f7ff;
+    background-color: transparent;
     padding: 20px;
+    padding-left: 70%;
 }
 
 .menu-juegos ul {
@@ -411,17 +427,19 @@ nav ul li button:active {
 }
 
 .menu-juegos li {
+    background-color: #007bff;
+    border-radius: 5px;
     margin-bottom: 50px;
 }
 
 .menu-juegos a {
     text-decoration: none;
-    color: #ff6f61;
+    color: #000000;
     font-size: 1.2em;
     display: block;
     padding: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    background-color: ff6f61 ;
 }
 
 .menu-juegos a:hover {
@@ -430,8 +448,8 @@ nav ul li button:active {
 }
 
 .juego-display {
-    background-color: #00f7ff;
-    padding: 20px;
+    background-color: transparent;
+    padding: auto;
     text-align: center;
 }
 
@@ -444,7 +462,7 @@ nav ul li button:active {
 
 
 .pie-de-pagina {
-    background-color: #ffffff; /* Color de fondo oscuro */
+    background-color: #fff3f3; /* Color de fondo oscuro */
     color: rgb(0, 0, 0); /* Color del texto */
     padding: 20px 0; /* Espaciado interno */
     text-align: center; /* Centra el texto */
