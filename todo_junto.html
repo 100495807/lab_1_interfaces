@@ -50,7 +50,9 @@
     <!-- Sección Las cartas -->
     <!-- Sección Cartas -->
     <section id="cartas">
-        <h1>Las cartas</h1>
+        <div class = "rotulo-titulos">
+            <h1>Las cartas</h1> 
+        </div>
         <div class="cartas-grid">
             <article class="carta">
                 <h2>Carta número 1</h2>
@@ -129,7 +131,9 @@
 
     <!-- Sección Enviar tu carta -->
     <section id="enviar">
-        <h1>Envía tu carta</h1>
+        <div class = "rotulo-titulos">
+            <h1>Envía tu carta</h1> 
+        </div>
         <form class="enviar-form">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
@@ -159,17 +163,30 @@
 
     <!-- Sección ¡Juega! -->
     <section id="jugar">
-        <h1>¡Juega!</h1>
+        <div class = "rotulo-titulos">
+            <h1>¡Juega!</h1> 
+        </div>
         <div class="jugar-contenido">
             <div class="menu-juegos">
+                <div class="rotulo-titulos">
+                    <h2>Elige un juego:</h2>
+                </div>
                 <ul>
-                    <li><a href="#" class="juego-opcion" data-juego="juego1">Juego 1</a></li>
-                    <li><a href="#" class="juego-opcion" data-juego="juego2">Juego 2</a></li>
-                    <li><a href="#" class="juego-opcion" data-juego="juego3">Juego 3</a></li>
+                    <li><a href="#juego1" class="juego-opcion" data-juego="juego1">Juego 1</a></li>
+                    <li><a href="#juego2" class="juego-opcion" data-juego="juego2">Juego 2</a></li>
+                    <li><a href="#juego3" class="juego-opcion" data-juego="juego3">Juego 3</a></li>
                 </ul>
             </div>
             <div class="juego-display">
-                <img src="imagenes/snowman.png" alt="Juego 1" id="juego-imagen">
+                <div id="juego1">
+                    <img src="imagenes/snowman.png" alt="Juego 1">
+                </div>
+                <div id="juego2">
+                    <img src="imagenes/reno.png" alt="Juego 2">
+                </div>
+                <div id="juego3">
+                    <img src="imagenes/chimenea.png" alt="Juego 3">
+                </div>
             </div>
         </div>
     </section>
