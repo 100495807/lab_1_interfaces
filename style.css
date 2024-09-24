@@ -526,7 +526,15 @@ nav ul li button:active {
     }
 
     .cartas-grid {
-        grid-template-columns: 1fr 1fr; /* Dos columnas */
+        grid-template-columns: 1fr; /* Una columna */
+    }
+
+    .menu-juegos li {
+        margin-bottom: 20px; /* Reduce el margen inferior */
+    }
+
+    .carta {
+        max-width: 100%; /* Asegura que las cartas ocupen todo el ancho disponible */
     }
 
     .encabezado {
@@ -534,6 +542,7 @@ nav ul li button:active {
         align-items: center; /* Centra los elementos */
         justify-content: space-between; /* Espacia los elementos */
         padding: 10px; /* Ajusta el padding */
+        position: relative; /* Necesario para posicionar el botón de menú */
     }
 
     .menu-icon {
@@ -545,6 +554,21 @@ nav ul li button:active {
         flex-direction: column; /* Cambia a disposición en columna */
         align-items: center; /* Centra los elementos */
         width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
+        background-color: #fff; /* Fondo blanco para el menú desplegable */
+        padding: 10px 0; /* Añade padding vertical */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
+    }
+
+    .menu li {
+        width: 100%; /* Asegura que cada elemento del menú ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto de cada elemento */
+        padding: 10px 0; /* Añade padding vertical a cada elemento */
+        border-bottom: 1px solid #ddd; /* Añade una línea divisoria entre los elementos */
+        margin-left: 20px;
+    }
+
+    .menu li:last-child {
+        border-bottom: none; /* Elimina la línea divisoria del último elemento */
     }
 
     .menu-toggle:checked + .menu-icon + nav .menu {
@@ -580,6 +604,7 @@ nav ul li button:active {
         align-items: center; /* Centra los elementos */
         justify-content: space-between; /* Espacia los elementos */
         padding: 10px; /* Ajusta el padding */
+        position: relative; /* Necesario para posicionar el botón de menú */
     }
 
     .menu-icon {
@@ -601,6 +626,7 @@ nav ul li button:active {
         text-align: center; /* Centra el texto de cada elemento */
         padding: 10px 0; /* Añade padding vertical a cada elemento */
         border-bottom: 1px solid #ddd; /* Añade una línea divisoria entre los elementos */
+        margin-left: 20px;
     }
 
     .menu li:last-child {
