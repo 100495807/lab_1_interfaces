@@ -63,9 +63,14 @@ nav ul li a {
 
 }
 
-nav ul li a:hover {
-    text-decoration: none;
+.no-active:hover {
+    background-color: rgb(60, 255, 0); /* Fondo azul para resaltar */
+    color: rgb(0, 0, 0); /* Cambia el color del texto a blanco */
+    padding: 2px 2px; /* Añade relleno alrededor del texto */
+    border-radius: 5px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra para crear un recuadro sin bordes */
 }
+    
 
 nav ul li button:active {
     animation: button-click 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
