@@ -6,10 +6,10 @@ html {
 body {
     font-family: Arial, sans-serif;
     background-color: transparent;
-    margin: 0;
-    padding: 20px; /* Aplica el mismo padding a toda la página */
     scroll-behavior: smooth; /* Añade un desplazamiento suave al hacer scroll */
     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del elemento */
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -18,7 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 1% 3%;
     color: rgb(0, 0, 0);
     position: sticky;
     top: 0;
@@ -26,10 +26,9 @@ body {
 }
 
 .encabezado img {
-    height: 80px;
-    width: 80px;
+    height: 12%;
+    width: 12%;
     border-radius: 50%; /* Hace que el logo sea circular */
-    border: 2px solid white; /* Añade un borde blanco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para darle profundidad */
     transition: transform 0.3s ease; /* Añade una transición suave para el efecto hover */
 }
@@ -40,7 +39,6 @@ body {
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     align-items: center; /* Alinea los elementos verticalmente al centro */
     margin: 0;
@@ -48,7 +46,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 
@@ -58,20 +56,22 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: black;
     font-weight: bold;
 
 }
 
+.no-active{
+    padding: 5px 10px; /* Añade relleno alrededor del texto */
+}
+
 .no-active:hover {
-    background-color: rgb(60, 255, 0); /* Fondo azul para resaltar */
-    color: rgb(0, 0, 0); /* Cambia el color del texto a blanco */
-    padding: 2px 2px; /* Añade relleno alrededor del texto */
+    background-color: rgb(60, 255, 0);
+    color: black;
     border-radius: 5px; /* Redondea las esquinas */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra para crear un recuadro sin bordes */
 }
     
-
 nav ul li button:active {
     animation: button-click 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
@@ -90,7 +90,7 @@ nav ul li button:active {
 
 .active{
     background-color: rgb(255, 0, 136); /* Fondo azul para resaltar */
-    color: rgb(0, 0, 0); /* Cambia el color del texto a blanco */
+    color: black; /* Cambia el color del texto a blanco */
     font-weight: bold; /* Aumenta el grosor de la fuente */
     padding: 5px 10px; /* Añade relleno alrededor del texto */
     border-radius: 5px; /* Redondea las esquinas */
@@ -132,26 +132,26 @@ nav ul li button:active {
 }
 
 #home h1 {
-    font-size: 6em;
+    font-size: 600%;
     color: whitesmoke;
     text-align: center;
 }
 
 #home .counter {
-    font-size: 1.5em;
+    font-size: 150%;
     color: white;
     text-align: center;
 }
 
 #home button {
-    margin-top: 40px;
+    margin-top: 3%;
     padding: 15px 30px; /* Aumenta el tamaño del botón */
-    font-size: 1.2em; /* Aumenta el tamaño de la fuente */
+    font-size: 120%; /* Aumenta el tamaño de la fuente */
     background-color: #ff6f61; /* Color de fondo */
     color: white; /* Color del texto */
     border: none; /* Sin borde */
     border-radius: 10px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor a pointer */
+    cursor: not-allowed; /* Cambia el cursor a pointer */
     transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
@@ -164,37 +164,37 @@ nav ul li button:active {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 20px;
+    padding: 10%; /* Espaciado interno */
     box-sizing: border-box;
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: white; /* Color del texto para que sea legible sobre la imagen */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
     font-family: 'Mountains of Christmas'; /* Fuente navideña */
 }
 
 .papa-noel-container {
     display: flex;
-    gap: 20px; /* Añade un espacio de 20px entre la imagen y el texto */
-    max-width: 1200px; /* Limita el ancho máximo del contenedor */
-    padding: 20px;
+    gap: 1%; 
+    padding:2%;
+    border-radius: 10px;
     background-color:  rgb(230, 220, 177); /* Fondo blanco para el contenedor */
 
 }
 
 .papa-noel-img {
-    width: 450px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 35%; /* Ajusta el tamaño de la imagen */
+    height: 35%; /* Mantiene la proporción de la imagen */
+    align-self: center; /* Alinea la imagen verticalmente al centro */
     border-radius: 10px; /* Redondea las esquinas de la imagen */
 }
 
 .papa-noel-texto {
-    font-family: 'Mountains of Christmas', cursive; /* Fuente navideña */
-    color: white; /* Color del texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    font-family: 'Mountains of Christmas'; /* Fuente navideña */
+    color: black; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */;
+    margin-bottom: 10px; /* Añade un margen inferior a los párrafos */
 }
 
 .papa-noel-texto h1 {
@@ -202,21 +202,16 @@ nav ul li button:active {
     font-family: 'Mountains of Christmas'; /* Fuente personalizada */
     color: #00db00; /* Color verde festivo */
     text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
-    padding: 10px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
-}
-
-.papa-noel-texto p {
-    margin-bottom: 10px; /* Añade un margen inferior a los párrafos */
+    font-size: 200%;
+    margin-left: 37%;
 }
 
 .rotulo-titulos h1{
     font-family: 'Mountains of Christmas'; /* Fuente navideña */
     color: #00db00; /* Color verde festivo */
-    padding-bottom: 40px; /* Ajusta el padding */
     font-weight: bolder;
-    font-size: 60px;
-    border-radius: 12px;
+    font-size: 450%;
     text-align: center;
     text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
 }
@@ -226,8 +221,7 @@ nav ul li button:active {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 20px;
-    box-sizing: border-box;
+    padding: 2%;
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
     flex-direction: column;
@@ -235,25 +229,24 @@ nav ul li button:active {
     justify-content:center;
 }
 
-
 .cartas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 0.5%;
     width: 100%;
-    max-width: 1200px;
+    max-width: 75%;
     justify-content: center;
+    padding-bottom: 5%;
 }
 
 .carta {
     background-color: white;
-    padding: 20px;
+    padding: 3%;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    width: 100%;
-    max-width: 300px; /* Asegura que las cartas no se extiendan demasiado */
+    width: 90%; /* Ajusta el ancho de las cartas */
     margin: 0 auto; /* Centra cada carta individualmente */
     background-image: url('imagenes/plantilla-carta.jpg'); /* Ruta a tu imagen de fondo navideña */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
@@ -265,8 +258,9 @@ nav ul li button:active {
     font-family: 'Mountains of Christmas'; /* Fuente navideña */
     color: #000000; /* Color verde festivo */
     font-weight: bold;
-    font-size: 25px;
+    font-size: 160%;
     text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
+    text-align: center;
 }
 
 .carta-contenido {
@@ -298,7 +292,7 @@ nav ul li button:active {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 20px;
+    padding: 5%;
     box-sizing: border-box;
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
@@ -312,20 +306,12 @@ nav ul li button:active {
 .enviar-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 3%;
+    row-gap: 8%;
     width: 100%;
-    max-width: 800px;
+    max-width: 70%;
     font-weight: bold;
     color: #000000;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    margin-bottom: 5px; /* Añade un margen inferior a las etiquetas */
 }
 
 .form-group input,
@@ -344,14 +330,13 @@ nav ul li button:active {
 
 .form-group textarea {
     width: 100%; /* Ocupa todo el ancho disponible */
-    height: 150px; /* Ajusta la altura del textarea */
+    height: 90%; /* Ajusta la altura del textarea */
 }
 
 .form-group.button-group {
     grid-column: span 2; /* Ocupa dos columnas */
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
-    align-items: center; /* Centra el botón verticalmente */
 }
 
 .form-group button {
@@ -360,18 +345,13 @@ nav ul li button:active {
     border-radius: 5px; /* Bordes redondeados */
     background-color: #007bff; /* Color de fondo */
     color: white; /* Color del texto */
-    cursor: pointer; /* Cursor de mano */
+    cursor: not-allowed; /* Cursor de mano */
     text-align: center; /* Centra el texto */
-    width: 100px; /* Ancho del botón */
+    width: 20%; /* Ancho del botón */
 }
 
 .form-group button:hover {
     background-color: #0056b3; /* Color de fondo al pasar el ratón */
-}
-
-/* Estilo para el texto del marcador de posición */
-::placeholder {
-    color: #999; /* Color suave para el texto del marcador de posición */
 }
 
 #jugar {
@@ -379,9 +359,9 @@ nav ul li button:active {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding-top: 60px; /* Ajusta este valor según la altura de tu header */
+    padding-top: 30%; /* Ajusta este valor según la altura de tu header */
     min-height: 100vh; /* Ocupa al menos la altura de la ventana */
-    padding: 20px; /* Espaciado interno */
+    padding: 5%; /* Espaciado interno */
     box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
     font-weight: bold;
 }
@@ -389,20 +369,18 @@ nav ul li button:active {
 .jugar-contenido {
     display: grid;
     grid-template-columns: 1fr 3fr; /* Dos columnas: menú y display */
-    gap: 20px; /* Espacio entre las columnas */
+    gap: 15%; /* Espacio entre las columnas */
 }
 
 .menu-juegos {
     background-color: transparent;
-    padding: 20px;
-    padding-left: 40px;
 }
 .rotulo-titulos h2{
     font-family: 'Mountains of Christmas'; /* Fuente navideña */
     color: #00db00; /* Color verde festivo */
-    padding-bottom: 20px; /* Ajusta el padding */
+    padding-bottom: 5%; /* Ajusta el padding */
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 300%;
     border-radius: 12px;
     text-align: center;
     text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
@@ -410,25 +388,23 @@ nav ul li button:active {
 
 .menu-juegos ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     color: white;
 }
 
 .menu-juegos li {
     border-radius: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 15%;
     color: white;
 }
 
 .menu-juegos a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.2em;
+    font-size: 120%;
     display: flex; /* Cambia a flexbox para centrar el contenido */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
-    padding: 10px;
+    padding: 4%;
 }
 
 .menu-juegos a:hover {
@@ -456,14 +432,14 @@ nav ul li button:active {
 
 .juego-display img {
     max-width: 100%;
-    height: 400px;
+    height: 200%;
     border-radius: 10px;
 }
 
 .pie-de-pagina {
     background-color: #fff3f3; /* Color de fondo oscuro */
     color: rgb(0, 0, 0); /* Color del texto */
-    padding: 20px 0; /* Espaciado interno */
+    padding: 2% 0; /* Espaciado interno */
     text-align: center; /* Centra el texto */
     position: relative;
     bottom: 0;
@@ -473,12 +449,12 @@ nav ul li button:active {
 .pie-de-pagina a {
     color: rgb(0, 0, 0); /* Color del texto de los enlaces */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    margin: 0 15px; /* Añade un margen lateral a los enlaces */
+    margin: 1.5%; /* Añade un margen lateral a los enlaces */
     font-weight: bold; /* Texto en negrita */
 }
 
 .pie-de-pagina img {
-    width: 30px; /* Ajusta el tamaño de los iconos */
+    width: 2%; /* Ajusta el tamaño de los iconos */
     height: auto; /* Mantiene la proporción de los iconos */
     margin: 0 10px; /* Añade un margen lateral a los iconos */
     vertical-align: middle; /* Alinea verticalmente los iconos con el texto */
@@ -486,8 +462,8 @@ nav ul li button:active {
 }
 
 .Facebook img {
-    width: 35px; /* Ajusta el tamaño para cuadrar con el resto de logos */
-    height: 35px; 
+    width: 2.5%; /* Ajusta el tamaño para cuadrar con el resto de logos */
+    height: 2.5%; 
 }
 
 
@@ -502,12 +478,6 @@ nav ul li button:active {
 
 .menu-icon {
     display: none; /* Oculto por defecto */
-    font-size: 2em;
-    cursor: pointer;
-    color: #000;
-    position: absolute;
-    right: 20px; /* Alinea el botón a la derecha */
-    top: 20px; /* Alinea el botón en la parte superior */
 }
 
 /* Estilos para el menú */
