@@ -426,104 +426,117 @@ nav ul li button:active {
         gap: 15%; /* Añade un espacio del 15% entre las columnas */
     }
 
+/* Estilo para el menú de juegos */
 .menu-juegos {
-    background-color: transparent;
+    background-color: transparent; /* Fondo transparente para el menú de juegos */
 }
-.rotulo-titulos h2{
+
+/* Estilo para los subtítulos en la sección de rotulo-titulos */
+.rotulo-titulos h2 {
     font-family: 'Mountains of Christmas'; /* Fuente navideña */
     color: #00db00; /* Color verde festivo */
-    padding-bottom: 5%; /* Ajusta el padding */
-    font-weight: bolder;
-    font-size: 300%;
-    border-radius: 12px;
-    text-align: center;
-    text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
+    padding-bottom: 5%; /* Añade un relleno inferior del 5% */
+    font-weight: bolder; /* Aumenta el grosor de la fuente */
+    font-size: 300%; /* Tamaño de fuente del 300% */
+    border-radius: 12px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    text-shadow: 2px 2px 4px #383838; /* Añade una sombra al texto */
 }
 
+/* Estilos para la lista de juegos dentro del menú de juegos */
 .menu-juegos ul {
-    list-style: none;
-    color: white;
+    list-style: none; /* Elimina los puntos de la lista */
+    color: white; /* Establece el color del texto en blanco */
 }
 
+/* Estilos para los elementos de la lista de juegos */
 .menu-juegos li {
-    border-radius: 5px;
-    margin-bottom: 15%;
-    color: white;
+    border-radius: 5px; /* Redondea las esquinas de los elementos */
+    margin-bottom: 15%; /* Añade un margen inferior del 15% */
+    color: white; /* Establece el color del texto en blanco */
 }
 
+/* Estilos para los enlaces dentro de los elementos de la lista de juegos */
 .menu-juegos a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 120%;
-    display: flex; /* Cambia a flexbox para centrar el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    padding: 4%;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #ffffff; /* Establece el color del texto en blanco */
+    font-size: 120%; /* Aumenta el tamaño de la fuente al 120% */
+    display: flex; /* Utiliza el modelo de caja flexible para organizar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 4%; /* Añade un relleno interno del 4% */
 }
 
+/* Estilo para los enlaces dentro del menú de juegos al pasar el ratón por encima */
 .menu-juegos a:hover {
-    background-color: #059b2a;
-    color: #fff;
-    border-radius: 5px;
+    background-color: #059b2a; /* Cambia el fondo a un verde oscuro */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border-radius: 5px; /* Redondea las esquinas */
 }
 
+/* Contenedor para mostrar el juego seleccionado */
 .juego-display {
-    background-color: transparent;
-    text-align: center;
+    background-color: transparent; /* Fondo transparente */
+    text-align: center; /* Centra el contenido */
 }
 
-/* Ocultar todas las imágenes por defecto */
+/* Ocultar todas las imágenes de los juegos por defecto */
 .juego-display > div {
-    display: none;
+    display: none; /* Oculta los elementos hijos */
 }
 
 /* Mostrar la imagen del juego seleccionado */
 #juego1:target,
 #juego2:target,
 #juego3:target {
-    display: block;
+    display: block; /* Muestra el elemento cuando es el objetivo del enlace */
 }
 
+/* Estilo para las imágenes dentro del contenedor de juegos */
 .juego-display img {
-    max-width: 100%;
-    height: 200%;
-    border-radius: 10px;
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: 200%; /* Ajusta la altura de la imagen */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
 }
 
+/* Estilo para el pie de página */
 .pie-de-pagina {
-    background-color: #fff3f3; /* Color de fondo oscuro */
+    background-color: #fff3f3; /* Color de fondo claro */
     color: rgb(0, 0, 0); /* Color del texto */
     padding: 2% 0; /* Espaciado interno */
     text-align: center; /* Centra el texto */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    position: relative; /* Posiciona el pie de página relativo a su contenedor */
+    bottom: 0; /* Alinea el pie de página al fondo */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho disponible */
 }
 
-.pie-de-pagina a {
-    color: rgb(0, 0, 0); /* Color del texto de los enlaces */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    margin: 1.5%; /* Añade un margen lateral a los enlaces */
-    font-weight: bold; /* Texto en negrita */
-}
+    /* Estilo para los enlaces dentro del pie de página */
+    .pie-de-pagina a {
+        color: rgb(0, 0, 0); /* Color del texto de los enlaces */
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        margin: 1.5%; /* Añade un margen lateral a los enlaces */
+        font-weight: bold; /* Texto en negrita */
+    }
 
-.pie-de-pagina img {
-    width: 2%; /* Ajusta el tamaño de los iconos */
-    height: auto; /* Mantiene la proporción de los iconos */
-    margin: 0 10px; /* Añade un margen lateral a los iconos */
-    vertical-align: middle; /* Alinea verticalmente los iconos con el texto */
-    transition: transform 0.3s; /* Añade una transición suave */
-}
+    /* Estilo para las imágenes dentro del pie de página */
+    .pie-de-pagina img {
+        width: 2%; /* Ajusta el tamaño de los iconos */
+        height: auto; /* Mantiene la proporción de los iconos */
+        margin: 0 10px; /* Añade un margen lateral a los iconos */
+        vertical-align: middle; /* Alinea verticalmente los iconos con el texto */
+        transition: transform 0.3s; /* Añade una transición suave */
+    }
 
-.Facebook img {
-    width: 2.5%; /* Ajusta el tamaño para cuadrar con el resto de logos */
-    height: 2.5%; 
-}
+        /* Estilo para las imágenes dentro del pie de página al pasar el ratón por encima */
+    .pie-de-pagina img:hover {
+        transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón por encima */
+    }
 
-
-.pie-de-pagina img:hover {
-    transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón por encima */
-}
+    /* Estilo específico para el icono de Facebook dentro del pie de página */
+    .Facebook img {
+        width: 2.5%; /* Ajusta el tamaño para cuadrar con el resto de logos */
+        height: 2.5%; /* Mantiene la proporción de los iconos */
+    }
 
 /* Estilos para el botón de menú (hamburguesa) */
 .menu-toggle {
@@ -536,10 +549,10 @@ nav ul li button:active {
 
 /* Estilos para el menú */
 .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex; /* Utiliza el modelo de caja flexible para los elementos hijos */
+    list-style: none; /* Elimina los estilos de lista predeterminados (como los puntos) */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
 }
 
 /* Media Queries para tablet (768px) */
@@ -645,23 +658,23 @@ nav ul li button:active {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
     }
 
-    .menu li {
-        width: 100%; /* Asegura que cada elemento del menú ocupe todo el ancho disponible */
-        text-align: center; /* Centra el texto de cada elemento */
-        padding: 10px 0; /* Añade padding vertical a cada elemento */
-        border-bottom: 1px solid #ddd; /* Añade una línea divisoria entre los elementos */
-        margin-left: 20px;
-    }
+        .menu li {
+            width: 100%; /* Asegura que cada elemento del menú ocupe todo el ancho disponible */
+            text-align: center; /* Centra el texto de cada elemento */
+            padding: 10px 0; /* Añade padding vertical a cada elemento */
+            border-bottom: 1px solid #ddd; /* Añade una línea divisoria entre los elementos */
+            margin-left: 20px;
+        }
 
-    .menu li:last-child {
-        border-bottom: none; /* Elimina la línea divisoria del último elemento */
-    }
+            .menu li:last-child {
+                border-bottom: none; /* Elimina la línea divisoria del último elemento */
+            }
 
-    .menu-toggle:checked + .menu-icon + nav .menu {
-        display: flex; /* Muestra el menú cuando se activa */
-    }
+            .menu-toggle:checked + .menu-icon + nav .menu {
+                display: flex; /* Muestra el menú cuando se activa */
+            }
 
-    .encabezado img {
-        margin-bottom: 0; /* Elimina el margen inferior */
-    }
+            .encabezado img {
+                margin-bottom: 0; /* Elimina el margen inferior */
+            }
 }
