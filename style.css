@@ -140,7 +140,7 @@ nav ul li button:active {
 
 /* Estilo para la página principal de la página web */
 #home {
-    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -187,7 +187,7 @@ nav ul li button:active {
 
 /* Estilo para la página de Papa Noel */
 #papa_noel {
-    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo navideña */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo navideña */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -249,11 +249,11 @@ nav ul li button:active {
 
 /* Estilo para la sección de cartas */
 #cartas {
-    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 2%; /* Añade un relleno interno del 2% */
+    padding: 2%;
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
     flex-direction: column;
@@ -332,7 +332,7 @@ nav ul li button:active {
 
 /* Estilo para la sección de enviar */
 #enviar {
-    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -408,7 +408,7 @@ nav ul li button:active {
 
 /* Estilo para la página de juegos */
 #jugar {
-    background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
