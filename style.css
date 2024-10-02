@@ -1,80 +1,87 @@
+/* Estilo para el elemento html */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Añade un desplazamiento suave al hacer scroll */
 }
 
-/*Creamos el estilo del body, para que mantenga un estilo común*/
+/* Estilo para el body, para mantener un estilo común */
 body {
-    font-family: Arial, sans-serif;
-    background-color: transparent;
-    scroll-behavior: smooth; /* Añade un desplazamiento suave al hacer scroll */
+    font-family: Arial, sans-serif; /* Fuente principal del documento */
+    background-color: transparent; /* Fondo transparente */
     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del elemento */
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
 
 /* Estilos para la cabecera */
 .encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.3125rem 1.25rem;
-    color: rgb(0, 0, 0);
-    position: sticky;
-    top: 0;
-    z-index: 100%;
-    overflow: hidden; /* Asegura que el contenido no se desborde */
+    display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+    align-items: center; /* Alinea los elementos hijos verticalmente en el centro */
+    justify-content: space-between; /* Distribuye el espacio sobrante entre los elementos hijos */
+    padding: 0.3125rem 1.25rem; /* Añade un relleno interno de 0.3125rem arriba y abajo, y 1.25rem a los lados */
+    color: rgb(0, 0, 0); /* Establece el color del texto en negro */
+    position: sticky; /* Fija la posición del elemento en la parte superior de la ventana cuando se hace scroll */
+    top: 0; /* Define que el elemento debe estar pegado a la parte superior */
+    z-index: 100%; /* Establece la prioridad del elemento en la pila de capas, asegurando que esté por encima de otros elementos */
+    overflow: hidden; /* Asegura que el contenido que se desborde del contenedor no sea visible */
 }
 
+/* Estilos para la imagen dentro de la cabecera */
 .encabezado img {
-    height: 12%;
-    width: 12%;
-    border-radius: 50%; /* Hace que el logo sea circular */
+    height: 12%; /* Establece la altura de la imagen al 12% del contenedor */
+    width: 12%; /* Establece el ancho de la imagen al 12% del contenedor */
+    border-radius: 50%; /* Hace que la imagen sea circular */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para darle profundidad */
     transition: transform 0.3s ease; /* Añade una transición suave para el efecto hover */
 }
 
-
+/* Estilo para la imagen dentro de la cabecera al pasar el ratón por encima */
 .encabezado img:hover {
     transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el ratón por encima */
 }
 
+/* Estilos para la lista de navegación dentro del elemento nav */
 nav ul {
-    display: flex;
-    align-items: center; /* Alinea los elementos verticalmente al centro */
-    margin: 0;
-    padding: 0;
+    display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+    align-items: center; /* Alinea los elementos hijos verticalmente en el centro */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
 }
 
+/* Estilos para los elementos de la lista de navegación */
 nav ul li {
-    margin-right: 10px;
+    margin-right: 10px; /* Añade un margen derecho a cada elemento de la lista */
 }
 
 
+/* Estilo para el último elemento de la lista de navegación */
 nav ul li:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
 }
 
+/* Estilo para los enlaces dentro de los elementos de la lista de navegación */
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: black; /* Establece el color del texto en negro */
+    font-weight: bold; /* Hace que el texto sea negrita */
 }
 
-.no-active{
+/* Estilo para los elementos no activos de la lista de navegación */
+.no-active {
     padding: 0.3125rem 0.625rem; /* Añade relleno alrededor del texto */
 }
 
+/* Estilo para los elementos no activos al pasar el ratón por encima */
 .no-active:hover {
-    background-color: rgb(60, 255, 0);
-    color: black;
+    background-color: rgb(60, 255, 0); /* Cambia el fondo a verde claro */
+    color: black; /* Establece el color del texto en negro */
     border-radius: 0.3125rem; /* Redondea las esquinas */
     box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5); /* Añade una sombra para crear un recuadro sin bordes */
 }
-    
+
+/* Estilo para los botones dentro de los elementos de la lista de navegación al hacer clic */
 nav ul li button:active {
-    animation: button-click 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation: button-click 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Añade una animación de clic */
 }
 
 @keyframes button-click {
@@ -88,7 +95,7 @@ nav ul li button:active {
         transform: scale(1);
     }
 }
-
+/*Estilo para el botón resaltado de Home*/
 .active{
     background-color: rgb(255, 0, 136); /* Fondo azul para resaltar */
     color: black; /* Cambia el color del texto a blanco */
@@ -98,24 +105,26 @@ nav ul li button:active {
     box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5); /* Añade una sombra para crear un recuadro sin bordes */
 }
 
+/* Contenedor para los botones de autenticación */
 .auth-buttons {
-    display: flex;
+    display: flex; /* Utiliza el modelo de caja flexible para organizar los botones */
     gap: 0.625rem; /* Añade un espacio de 10px entre los botones */
 }
 
+/* Estilos comunes para los botones de autenticación */
 .auth-buttons .boton,
 .auth-buttons .boton-active {
-    background-color: transparent; /* Fondo verde para los botones */
-    color: black;
-    border: none;
-    border-radius: 10px;
+    background-color: transparent; /* Fondo transparente para los botones */
+    color: black; /* Color del texto en negro */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
     transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
-
 }
 
+/* Estilo para los botones de autenticación al pasar el ratón por encima */
 .auth-buttons .boton-active:hover,
 .auth-buttons .boton:hover {
-    background-color: rgb(0, 255, 162);
+    background-color: rgb(0, 255, 162); /* Cambia el fondo a verde claro */
 }
 
 /* Asegurar que los enlaces se mantengan en una sola línea */
@@ -123,10 +132,13 @@ nav ul li button:active {
     white-space: nowrap;
 }
 
+/* Estilo para los botones de autenticación al pasar el ratón por encima */
 .auth-buttons .boton-active:hover,
 .auth-buttons .boton:hover {
-    background-color: rgb(0, 255, 162);
+    background-color: rgb(0, 255, 162); /* Cambia el fondo a verde claro */
 }
+
+/* Estilo para la página principal de la página web */
 #home {
     background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
@@ -141,34 +153,39 @@ nav ul li button:active {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
 }
 
-#home h1 {
-    font-size: 600%;
-    color: whitesmoke;
-    text-align: center;
-}
+    /* Estilo para el encabezado principal en la página de inicio */
+    #home h1 {
+        font-size: 600%; /* Tamaño de fuente muy grande para el encabezado */
+        color: whitesmoke; /* Color del texto en un tono blanco humo */
+        text-align: center; /* Centra el texto */
+    }
 
-#home .counter {
-    font-size: 150%;
-    color: white;
-    text-align: center;
-}
+    /* Estilo para el contador en la página de inicio */
+    #home .counter {
+        font-size: 150%; /* Tamaño de fuente grande para el contador */
+        color: white; /* Color del texto en blanco */
+        text-align: center; /* Centra el texto */
+    }
 
-#home button {
-    margin-top: 3%;
-    padding: 15px 30px; /* Aumenta el tamaño del botón */
-    font-size: 120%; /* Aumenta el tamaño de la fuente */
-    background-color: #ff6f61; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 10px; /* Bordes redondeados */
-    cursor: not-allowed; /* Cambia el cursor a pointer */
-    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
-}
+    /* Estilo para el botón de la página principal */
+    #home button {
+        margin-top: 3%;
+        padding: 15px 30px; /* Aumenta el tamaño del botón */
+        font-size: 120%; /* Aumenta el tamaño de la fuente */
+        background-color: #ff6f61; /* Color de fondo */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 10px; /* Bordes redondeados */
+        cursor: not-allowed; /* Cambia el cursor a pointer */
+        transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+    }
 
-#home button:hover {
-    background-color: #ff8f81; /* Color de fondo al pasar el ratón */
-}
+    #home button:hover {
+        background-color: #ff8f81; /* Color de fondo al pasar el ratón */
+    }
 
+
+/* Estilo para la página de Papa Noel */
 #papa_noel {
     background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo navideña */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
@@ -184,191 +201,212 @@ nav ul li button:active {
     font-family: 'Mountains of Christmas'; /* Fuente navideña */
 }
 
-.papa-noel-container {
-    display: flex;
-    gap: 1%; 
-    padding:2%;
-    border-radius: 10px;
-    background-color:  rgb(230, 220, 177); /* Fondo blanco para el contenedor */
+    /* Contenedor principal para la sección de Papa Noel */
+    .papa-noel-container {
+        display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+        gap: 1%; /* Añade un espacio de 1% entre los elementos hijos */
+        padding: 2%; /* Añade un relleno interno de 2% */
+        border-radius: 10px; /* Redondea las esquinas del contenedor */
+        background-color: rgb(230, 220, 177); /* Fondo color crema para el contenedor */
+    }
 
-}
+    /* Estilo para la imagen de Papa Noel */
+    .papa-noel-img {
+        width: 35%; /* Establece el ancho de la imagen al 35% del contenedor */
+        height: 35%; /* Establece la altura de la imagen al 35% del contenedor */
+        align-self: center; /* Alinea la imagen verticalmente al centro */
+        border-radius: 10px; /* Redondea las esquinas de la imagen */
+    }
 
-.papa-noel-img {
-    width: 35%; /* Ajusta el tamaño de la imagen */
-    height: 35%; /* Mantiene la proporción de la imagen */
-    align-self: center; /* Alinea la imagen verticalmente al centro */
-    border-radius: 10px; /* Redondea las esquinas de la imagen */
-}
+    /* Estilo para el texto en la sección de Papa Noel */
+    .papa-noel-texto {
+        font-family: 'Mountains of Christmas'; /* Fuente navideña */
+        color: black; /* Establece el color del texto en negro */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra al texto */
+        margin-bottom: 10px; /* Añade un margen inferior de 10px a los párrafos */
+    }
 
-.papa-noel-texto {
+    /* Estilo para el encabezado en la sección de Papa Noel */
+    .papa-noel-texto h1 {
+        margin-top: 0; /* Elimina el margen superior del encabezado */
+        font-family: 'Mountains of Christmas'; /* Fuente personalizada */
+        color: #00db00; /* Color verde festivo */
+        text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
+        border-radius: 10px; /* Bordes redondeados */
+        font-size: 200%; /* Tamaño de fuente del 200% */
+        margin-left: 37%; /* Margen izquierdo del 37% */
+    }
+
+/* Estilo para todos los títulos a partir de ahora */
+.rotulo-titulos h1 {
     font-family: 'Mountains of Christmas'; /* Fuente navideña */
-    color: black; /* Color del texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */;
-    margin-bottom: 10px; /* Añade un margen inferior a los párrafos */
-}
-
-.papa-noel-texto h1 {
-    margin-top: 0; /* Elimina el margen superior del encabezado */
-    font-family: 'Mountains of Christmas'; /* Fuente personalizada */
     color: #00db00; /* Color verde festivo */
-    text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
-    border-radius: 10px; /* Bordes redondeados */
-    font-size: 200%;
-    margin-left: 37%;
+    font-weight: bolder; /* Aumenta el grosor de la fuente */
+    font-size: 450%; /* Tamaño de fuente muy grande */
+    text-align: center; /* Centra el texto */
+    text-shadow: 2px 2px 4px #383838; /* Añade una sombra al texto */
 }
 
-.rotulo-titulos h1{
-    font-family: 'Mountains of Christmas'; /* Fuente navideña */
-    color: #00db00; /* Color verde festivo */
-    font-weight: bolder;
-    font-size: 450%;
-    text-align: center;
-    text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
-}
-
+/* Estilo para la sección de cartas */
 #cartas {
     background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 2%;
+    padding: 2%; /* Añade un relleno interno del 2% */
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center; /* Centra el contenido verticalmente */
 }
 
-.cartas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5%;
-    width: 100%;
-    max-width: 75%;
-    justify-content: center;
-    padding-bottom: 5%;
-}
+    /* Estilo para la cuadrícula de cartas */
+    .cartas-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Define una cuadrícula de 3 columnas */
+        gap: 0.5%; /* Añade un espacio del 0.5% entre las columnas */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 75%; /* Limita el ancho máximo al 75% */
+        justify-content: center; /* Centra la cuadrícula horizontalmente */
+        padding-bottom: 5%; /* Añade un relleno inferior del 5% */
+    }
 
-.carta {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    width: 90%; /* Ajusta el ancho de las cartas */
-    margin: 0 auto; /* Centra cada carta individualmente */
-    background-image: url('imagenes/plantilla-carta.jpg'); /* Ruta a tu imagen de fondo navideña */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-}
+    /* Estilo para las cartas en la sección de cartas */
+    .carta {
+        background-color: white; /* Fondo blanco para las cartas */
+        padding: 1rem; /* Espaciado interno de 1rem */
+        border: 1px solid #ccc; /* Borde gris claro */
+        border-radius: 0.5rem; /* Bordes redondeados */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+        box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+        width: 90%; /* Ajusta el ancho de las cartas */
+        margin: 0 auto; /* Centra cada carta individualmente */
+        background-image: url('imagenes/plantilla-carta.jpg'); /* Ruta a tu imagen de fondo navideña */
+        background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+    }
 
-.carta:hover {
-    transform: scale(1.05); /* Aumenta el tamaño de la carta al pasar el ratón por encima */
-}
+    /* Estilo para las cartas al pasar el ratón por encima */
+    .carta:hover {
+        transform: scale(1.05); /* Aumenta el tamaño de la carta al pasar el ratón por encima */
+    }
+    /* Estilo para el título dentro de las cartas */
+    .carta h2 {
+        font-family: 'Mountains of Christmas'; /* Fuente navideña */
+        color: #000000; /* Color negro */
+        font-weight: bold; /* Texto en negrita */
+        font-size: 160%; /* Tamaño de fuente del 160% */
+        text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
+        text-align: center; /* Centra el texto */
+    }
 
-.carta h2{
-    font-family: 'Mountains of Christmas'; /* Fuente navideña */
-    color: #000000; /* Color verde festivo */
-    font-weight: bold;
-    font-size: 160%;
-    text-shadow: 2px 2px 4px #383838; /* Sombra al texto */
-    text-align: center;
-}
+    /* Contenedor para el contenido de las cartas */
+    .carta-contenido {
+        display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+        align-items: center; /* Alinea los elementos verticalmente al centro */
+    }
 
-.carta-contenido {
-    display: flex;
-    align-items: center; /* Alinea los elementos verticalmente al centro */
-}
+    /* Estilo para las imágenes dentro de las cartas */
+    .carta img {
+        width: 80px; /* Ajusta el tamaño de la imagen */
+        height: 80px; /* Ajusta el tamaño de la imagen */
+        object-fit: cover; /* Asegura que la imagen mantenga su proporción y cubra el área asignada */
+        border-radius: 50%; /* Hace que la imagen sea circular */
+        margin-right: 10px; /* Añade un margen derecho debajo de la imagen */
+    }
 
-.carta img {
-    width: 80px; /* Ajusta el tamaño de la imagen */
-    height: 80px; /* Ajusta el tamaño de la imagen */
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción y cubra el área asignada */
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    margin-right: 10px; /* Añade un margen derecho debajo de la imagen */
-}
+    /* Contenedor para el texto dentro de las cartas */
+    .carta-texto {
+        flex: 1; /* Permite que el texto ocupe el espacio restante */
+        color: white; /* Color del texto */
+    }
 
-.carta-texto {
-    flex: 1; /* Permite que el texto ocupe el espacio restante */
-    color: white;
-}
+    /* Estilo para los párrafos dentro de las cartas */
+    .carta p {
+        margin: 5px 0; /* Espacio alrededor de los párrafos */
+        font-family: 'Arial', sans-serif; /* Fuente legible */
+        color: #000000; /* Color del texto */
+    }
 
-.carta p {
-    margin: 5px 0; /* Espacio alrededor de los párrafos */
-    font-family: 'Arial', sans-serif; /* Fuente legible */
-    color: #000000; /* Color del texto */
-}
-
+/* Estilo para la sección de enviar */
 #enviar {
     background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 5%;
-    box-sizing: border-box;
+    padding: 5%; /* Añade un relleno interno del 5% */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
     min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    align-items: center; /* Alinea los elementos hijos horizontalmente al centro */
+    justify-content: center; /* Alinea los elementos hijos verticalmente al centro */
     color: #333; /* Color del texto para que sea legible sobre el fondo */
     font-family: 'Arial', sans-serif; /* Fuente legible y sencilla */
 }
 
 .enviar-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3%;
-    row-gap: 8%;
-    width: 100%;
-    max-width: 70%;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 1%;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
-    background-color: #fbdad5;
-}
-
-.form-group.textarea-group {
-    grid-column: span 2; /* Ocupa dos columnas */
-}
-
-.form-group textarea {
+    display: grid; /* Utiliza el modelo de cuadrícula para organizar los elementos hijos */
+    grid-template-columns: 1fr 1fr; /* Define una cuadrícula de dos columnas iguales */
+    gap: 3%; /* Añade un espacio del 3% entre las columnas */
+    row-gap: 8%; /* Añade un espacio del 8% entre las filas */
     width: 100%; /* Ocupa todo el ancho disponible */
-    height: 90%; /* Ajusta la altura del textarea */
+    max-width: 70%; /* Limita el ancho máximo al 70% */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #000000; /* Establece el color del texto en negro */
+    margin-bottom: 1%; /* Añade un margen inferior del 1% */
 }
 
-.form-group.button-group {
-    grid-column: span 2; /* Ocupa dos columnas */
-    display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
-}
+    /* Estilos para los inputs y textareas dentro del grupo de formularios */
+    .form-group input,
+    .form-group textarea {
+        padding: 10px; /* Espaciado interno */
+        border: 1px solid #ccc; /* Borde */
+        border-radius: 5px; /* Bordes redondeados */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
+        background-color: #fbdad5; /* Color de fondo */
+    }
 
-.form-group button {
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #007bff; /* Color de fondo */
-    color: white; /* Color del texto */
-    cursor: not-allowed; /* Cursor de mano */
-    text-align: center; /* Centra el texto */
-    width: 20%; /* Ancho del botón */
-}
+        /* Estilo para el grupo de textarea, para que ocupe dos columnas */
+        .form-group.textarea-group {
+            grid-column: span 2; /* Ocupa dos columnas */
+        }
 
-.form-group button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el ratón */
-}
+    /* Estilo específico para el textarea dentro del grupo de formularios */
+    .form-group textarea {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: 90%; /* Ajusta la altura del textarea */
+    }
 
+    /* Estilo para el grupo de botones, para que ocupe dos columnas y centrar el botón */
+    .form-group.button-group {
+        grid-column: span 2; /* Ocupa dos columnas */
+        display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+        justify-content: center; /* Centra el botón horizontalmente */
+    }
+
+    /* Estilo para el botón dentro del grupo de formularios */
+    .form-group button {
+        padding: 10px 20px; /* Espaciado interno */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        background-color: #007bff; /* Color de fondo */
+        color: white; /* Color del texto */
+        cursor: not-allowed; /* Cursor de mano */
+        text-align: center; /* Centra el texto */
+        width: 20%; /* Ancho del botón */
+    }
+
+        /* Estilo para el botón dentro del grupo de formularios al pasar el ratón por encima */
+        .form-group button:hover {
+            background-color: #0056b3; /* Color de fondo al pasar el ratón */
+        }
+
+
+/* Estilo para la página de juegos */
 #jugar {
     background-image: url('imagenes/fodo-home.jpg'); /* Ruta a tu imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
@@ -378,14 +416,15 @@ nav ul li button:active {
     min-height: 100vh; /* Ocupa al menos la altura de la ventana */
     padding: 5%; /* Espaciado interno */
     box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
-    font-weight: bold;
+    font-weight: bold; /* Hace que el texto sea negrita */
 }
 
-.jugar-contenido {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Dos columnas: menú y display */
-    gap: 15%; /* Espacio entre las columnas */
-}
+    /* Contenedor para el contenido de la página de juegos */
+    .jugar-contenido {
+        display: grid; /* Utiliza el modelo de cuadrícula para organizar los elementos hijos */
+        grid-template-columns: 1fr 3fr; /* Define una cuadrícula de dos columnas: menú y display */
+        gap: 15%; /* Añade un espacio del 15% entre las columnas */
+    }
 
 .menu-juegos {
     background-color: transparent;
