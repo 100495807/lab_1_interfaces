@@ -1,0 +1,10 @@
+Uso de IA en el desarrollo del proyecto
+
+Hemos utilizado las herramientas de inteligencia artificial para los siguientes aspectos:
+
+Comentarios del código: Ayuda para añadir descripciones detalladas y claras sobre el funcionamiento del código en todas las lineas, 
+                        asegurando que sea más facil de comprender
+
+Sugerencias de mejora de la pagina web: La IA nos ha explicado como gestionar: los porcentajes, vh, rem ;dentro de nuestra página web.
+
+Generación de texto: Hemos usado la IA para generar texto ficticios

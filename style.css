@@ -84,21 +84,23 @@ nav ul li button:active {
     animation: button-click 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Añade una animación de clic */
 }
 
+/* Definición de la animación button-click */
 @keyframes button-click {
     0% {
-        transform: scale(1);
+        transform: scale(1); /* Al inicio de la animación, el elemento tiene su tamaño original */
     }
     50% {
-        transform: scale(0.95);
+        transform: scale(0.95); /* A la mitad de la animación, el elemento se reduce al 95% de su tamaño original */
     }
     100% {
-        transform: scale(1);
+        transform: scale(1); /* Al final de la animación, el elemento vuelve a su tamaño original */
     }
 }
+
 /*Estilo para el botón resaltado de Home*/
 .active{
     background-color: rgb(255, 0, 136); /* Fondo azul para resaltar */
-    color: black; /* Cambia el color del texto a blanco */
+    color: black; /* Cambia el color del texto a negro */
     font-weight: bold; /* Aumenta el grosor de la fuente */
     padding: 0.3125rem 0.625rem; /* Añade relleno alrededor del texto */
     border-radius: 0.3125rem; /* Redondea las esquinas */
@@ -140,29 +142,29 @@ nav ul li button:active {
 
 /* Estilo para la página principal de la página web */
 #home {
-    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: black; /* Color del texto para que sea legible sobre la imagen */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura completa de la ventana */
+    display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    align-items: center; /* Alinea los elementos hijos horizontalmente en el centro */
+    justify-content: center; /* Alinea los elementos hijos verticalmente en el centro */
+    color: black; /* Establece el color del texto en negro para que sea legible sobre la imagen de fondo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra al texto para mejorar la legibilidad */
 }
 
     /* Estilo para el encabezado principal en la página de inicio */
     #home h1 {
-        font-size: 600%; /* Tamaño de fuente muy grande para el encabezado */
-        color: BLACK; /* Color del texto negro */
+        font-size: 600%; /* Tamaño de fuente para el encabezado */
+        color: black; /* Color del texto negro */
         text-align: center; /* Centra el texto */
     }
 
     /* Estilo para el contador en la página de inicio */
     #home .counter {
-        font-size: 150%; /* Tamaño de fuente grande para el contador */
+        font-size: 150%; /* Tamaño de fuente para el contador */
         color: black; /* Color del texto en negro */
         text-align: center; /* Centra el texto */
     }
@@ -187,18 +189,18 @@ nav ul li button:active {
 
 /* Estilo para la página de Papa Noel */
 #papa_noel {
-    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo navideña */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 10%; /* Espaciado interno */
-    box-sizing: border-box;
-    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
-    font-family: 'Mountains of Christmas'; /* Fuente navideña */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta de la imagen de fondo navideña */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo del contenedor */
+    background-position: center; /* Centra la imagen de fondo dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    padding: 10%; /* Añade un espaciado interno del 10% alrededor del contenido */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+    height: 100vh; /* Asegura que el contenedor tenga al menos la altura completa de la ventana del navegador */
+    display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+    flex-direction: row; /* Organiza los elementos hijos en una columna */
+    align-items: center; /* Alinea los elementos hijos horizontalmente en el centro del contenedor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra al texto para mejorar la legibilidad */
+    font-family: 'Mountains of Christmas'; /* Aplica una fuente navideña específica */
 }
 
     /* Contenedor principal para la sección de Papa Noel */
@@ -207,15 +209,17 @@ nav ul li button:active {
         gap: 1%; /* Añade un espacio de 1% entre los elementos hijos */
         padding: 2%; /* Añade un relleno interno de 2% */
         border-radius: 10px; /* Redondea las esquinas del contenedor */
-        background-color: rgb(230, 220, 177); /* Fondo color crema para el contenedor */
+        background-color: #fbdad5
+        ; /* Fondo color crema para el contenedor */
     }
 
     /* Estilo para la imagen de Papa Noel */
     .papa-noel-img {
-        width: 35%; /* Establece el ancho de la imagen al 35% del contenedor */
-        height: 35%; /* Establece la altura de la imagen al 35% del contenedor */
+        width: 50%; /* Establece el ancho de la imagen al 35% del contenedor */
+        height: 60%; /* Mantiene la proporción de la imagen */
         align-self: center; /* Alinea la imagen verticalmente al centro */
         border-radius: 10px; /* Redondea las esquinas de la imagen */
+        margin-right: 3%;
     }
 
     /* Estilo para el texto en la sección de Papa Noel */
@@ -250,15 +254,15 @@ nav ul li button:active {
 /* Estilo para la sección de cartas */
 #cartas {
     background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 2%;
-    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centra el contenido verticalmente */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo del contenedor */
+    background-position: center; /* Centra la imagen de fondo dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    padding: 2%; /* Añade un espaciado interno del 2% alrededor del contenido */
+    min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura completa de la ventana del navegador */
+    display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    align-items: center; /* Alinea los elementos hijos horizontalmente en el centro del contenedor */
+    justify-content: center; /* Alinea los elementos hijos verticalmente en el centro del contenedor */
 }
 
     /* Estilo para la cuadrícula de cartas */
@@ -282,7 +286,7 @@ nav ul li button:active {
         box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
         width: 90%; /* Ajusta el ancho de las cartas */
         margin: 0 auto; /* Centra cada carta individualmente */
-        background-image: url('imagenes/plantilla-carta.jpg'); /* Ruta a tu imagen de fondo navideña */
+        background-image: url('imagenes/plantilla-carta.jpg'); /* Ruta de la imagen */
         background-size: cover; /* Asegura que la imagen cubra todo el fondo */
         background-position: center; /* Centra la imagen de fondo */
         background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -332,13 +336,12 @@ nav ul li button:active {
 
 /* Estilo para la sección de enviar */
 #enviar {
-    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 5%; /* Añade un relleno interno del 5% */
     box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
-    min-height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
+    height: 100vh; /* Asegura que ocupe al menos la altura de la ventana */
     display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos */
     flex-direction: column; /* Organiza los elementos hijos en una columna */
     align-items: center; /* Alinea los elementos hijos horizontalmente al centro */
@@ -408,7 +411,7 @@ nav ul li button:active {
 
 /* Estilo para la página de juegos */
 #jugar {
-    background-image: url('imagenes/fondo-home.webp'); /* Ruta a tu imagen de fondo */
+    background-image: url('imagenes/fondo-home.webp'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -469,7 +472,7 @@ nav ul li button:active {
 
 /* Estilo para los enlaces dentro del menú de juegos al pasar el ratón por encima */
 .menu-juegos a:hover {
-    background-color: #059b2a; /* Cambia el fondo a un verde oscuro */
+    background-color: #00db00; /* Cambia el fondo a un verde oscuro */
     color: black; /* Cambia el color del texto a negro */
     border-radius: 5px; /* Redondea las esquinas */
 }
@@ -582,6 +585,17 @@ nav ul li button:active {
         position: relative; /* Necesario para posicionar el botón de menú */
     }
 
+    #papa_noel {
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center; /* Centra los elementos */
+        
+    }
+
+    .papa-noel-img{
+        padding-bottom: 5%;
+        border-radius: 0%;
+    }
+
     .menu-icon {
         display: block; /* Muestra el botón de menú */
     }
@@ -644,6 +658,11 @@ nav ul li button:active {
         position: relative; /* Necesario para posicionar el botón de menú */
     }
 
+    #papa_noel {
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
     .menu-icon {
         display: block; /* Muestra el botón de menú */
     }
@@ -663,7 +682,7 @@ nav ul li button:active {
             text-align: center; /* Centra el texto de cada elemento */
             padding: 10px 0; /* Añade padding vertical a cada elemento */
             border-bottom: 1px solid #ddd; /* Añade una línea divisoria entre los elementos */
-            margin-left: 20px;
+            margin-left: 20px; /* Añade un margen izquierdo a cada elemento */
         }
 
             .menu li:last-child {
