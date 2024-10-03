@@ -149,21 +149,21 @@ nav ul li button:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white; /* Color del texto para que sea legible sobre la imagen */
+    color: black; /* Color del texto para que sea legible sobre la imagen */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
 }
 
     /* Estilo para el encabezado principal en la página de inicio */
     #home h1 {
         font-size: 600%; /* Tamaño de fuente muy grande para el encabezado */
-        color: whitesmoke; /* Color del texto en un tono blanco humo */
+        color: BLACK; /* Color del texto negro */
         text-align: center; /* Centra el texto */
     }
 
     /* Estilo para el contador en la página de inicio */
     #home .counter {
         font-size: 150%; /* Tamaño de fuente grande para el contador */
-        color: white; /* Color del texto en blanco */
+        color: black; /* Color del texto en negro */
         text-align: center; /* Centra el texto */
     }
 
@@ -173,7 +173,7 @@ nav ul li button:active {
         padding: 15px 30px; /* Aumenta el tamaño del botón */
         font-size: 120%; /* Aumenta el tamaño de la fuente */
         background-color: #ff6f61; /* Color de fondo */
-        color: white; /* Color del texto */
+        color: black; /* Color del texto */
         border: none; /* Sin borde */
         border-radius: 10px; /* Bordes redondeados */
         cursor: not-allowed; /* Cambia el cursor a pointer */
@@ -446,20 +446,20 @@ nav ul li button:active {
 /* Estilos para la lista de juegos dentro del menú de juegos */
 .menu-juegos ul {
     list-style: none; /* Elimina los puntos de la lista */
-    color: white; /* Establece el color del texto en blanco */
+    color: black; /* Establece el color del texto en negro */
 }
 
 /* Estilos para los elementos de la lista de juegos */
 .menu-juegos li {
     border-radius: 5px; /* Redondea las esquinas de los elementos */
     margin-bottom: 15%; /* Añade un margen inferior del 15% */
-    color: white; /* Establece el color del texto en blanco */
+    color: black; /* Establece el color del texto en negro */
 }
 
 /* Estilos para los enlaces dentro de los elementos de la lista de juegos */
 .menu-juegos a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #ffffff; /* Establece el color del texto en blanco */
+    color: black; /* Establece el color del texto en negro */
     font-size: 120%; /* Aumenta el tamaño de la fuente al 120% */
     display: flex; /* Utiliza el modelo de caja flexible para organizar el contenido */
     justify-content: center; /* Centra el contenido horizontalmente */
@@ -470,7 +470,7 @@ nav ul li button:active {
 /* Estilo para los enlaces dentro del menú de juegos al pasar el ratón por encima */
 .menu-juegos a:hover {
     background-color: #059b2a; /* Cambia el fondo a un verde oscuro */
-    color: #fff; /* Cambia el color del texto a blanco */
+    color: black; /* Cambia el color del texto a negro */
     border-radius: 5px; /* Redondea las esquinas */
 }
 
